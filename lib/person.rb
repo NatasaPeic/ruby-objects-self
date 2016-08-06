@@ -14,7 +14,7 @@ class Person
   end
 
   def log_in
-    self.status = 'online'
+    self.status = 'now'
   end
 
   def log_out
@@ -24,3 +24,11 @@ class Person
     @status = 'offline'
   end
 end
+
+
+# require_relative 'lib/person.rb'
+# => true
+# [2] pry(main)> Natasa = Person.new
+# => #<Person:0x007fbd55b9cae8 @status=nil>
+# [3] pry(main)> Natasa.log_in
+# => "now"
