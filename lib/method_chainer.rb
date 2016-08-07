@@ -89,3 +89,26 @@ end
 # [10] pry(main)> new.reverse!
 # => "ELPPAELPPA"
 # [11] pry(main)>
+
+
+
+# class FullCat
+# [1] pry(main)*   def self.mouse
+# [1] pry(main)*     puts "Yes"
+# [1] pry(main)*   end
+# [1] pry(main)*   def escape
+# [1] pry(main)*     puts "No"
+# [1] pry(main)*   end
+# [1] pry(main)* end
+# => :escape
+# [2] pry(main)> newCat = FullCat.new
+# => #<FullCat:0x007feb2c1e3510>
+# [3] pry(main)> newCat.escape
+# No
+# => nil
+# [4] pry(main)> newCat.mouse
+# NoMethodError: undefined method `mouse' for #<FullCat:0x007feb2c1e3510>
+# from (pry):11:in `__pry__'
+# [5] pry(main)> FullCat.mouse
+# Yes
+# => nil
