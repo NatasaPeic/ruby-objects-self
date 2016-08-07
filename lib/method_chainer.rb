@@ -7,6 +7,7 @@ class MethodChainer
 
     def reverse!
         @content = @content.reverse()
+        self
         # self -- notice the difference when commented out
         # What is returned?
     end
@@ -21,6 +22,18 @@ class MethodChainer
        self
     end
 end
+
+# with self within reverse
+# ~/wdi/training/ruby-objects-self (training)$ pry
+# [1] pry(main)> require_relative 'lib/method_chainer.rb'
+# => true
+# [2] pry(main)> new = MethodChainer.new("Natasa")
+# => #<MethodChainer:0x007fb054b816e8 @content="Natasa">
+# [3] pry(main)> new.reverse!
+# => #<MethodChainer:0x007fb054b816e8 @content="asataN">
+# [4] pry(main)>
+
+
 
 
 # string = MethodChainer.new("apple")
